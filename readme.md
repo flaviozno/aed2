@@ -35,3 +35,5 @@ Usar 5 fatias de tempo entre 10.000 e 100.000 elementos.
 4) Relatório
 
 Confeccionar um relatório do projeto, contendo introdução, visão geral dos métodos escolhidos, impressão e análise dos resultados obtidos e conclusão. Na capa do relatório devem constar os nomes dos alunos e o link para o repositório em que o código está armazenado (Replit.com).
+
+https://www.geeksforgeeks.org/timsort/

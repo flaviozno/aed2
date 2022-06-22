@@ -11,6 +11,11 @@ clock_t t;
 int fillVector(int *vector, int maxLength);
 int printVector(int *vector, int maxLength);
 
+void swap(int *a, int *b);
+
+void merge(int arr[], int l, int m, int r);
+
+void insertionSort(int arr[], int left, int right);
 // ---Quick Sort---
 void quicksort(int *vector, int left, int right);
 
@@ -22,3 +27,6 @@ void bubbleSort(int *vector, int maxLength);
 
 // ---Heap Sort---
 void heapSort(int *vector, int maxLenght);
+
+// ---Tim Sort---
+void timSort(int *vector, int maxLenght);
