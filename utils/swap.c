@@ -1,7 +1,7 @@
 #include "imports.h"
 
-void swap(int *a, int *b) {
-    int temp = *a;
+void swap(Product *a, Product *b) {
+    Product temp = *a;
     *a = *b;
     *b = temp;
 }

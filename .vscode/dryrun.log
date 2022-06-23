@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/flaviozno/Documents/aed2'
+gcc main.c ./utils/*.c -o app -lm
+make: Leaving directory '/home/flaviozno/Documents/aed2'
+ 

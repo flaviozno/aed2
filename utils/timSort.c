@@ -6,7 +6,7 @@ int min(int a, int b) {
     if(a == b) return a;
 }
 
-void timSort(int *vector, int maxLenght)
+void timSort(Product *vector, int maxLenght)
 {
     for (int i = 0; i < maxLenght; i+=maxLenght)
         insertionSort(vector, i, min((i+maxLenght-1),(maxLenght-1)));

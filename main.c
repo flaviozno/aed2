@@ -1,11 +1,11 @@
 #include "./utils/imports.h"
 
-int main(){
-    int vet[100];
-    fillVector(vet, 100);
-    printVector(vet, 100);
-    timSort(vet, 100);
-    printVector(vet, 100);
-
+int main()
+{
+    Product vet[10];
+    fillVector(vet, 10);
+    printVector(vet, 10);
+    countSort(vet, 10);
+    printVector(vet, 10);
     return 0;
 }
