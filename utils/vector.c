@@ -17,7 +17,7 @@ int fillVector(Product *vector, int maxLength)
 
     for (int i = 0; i < maxLength; i++)
     {
-        vector[i].number = 1 + (rand() % 10000);
+        vector[i].number = 1 + (rand() % MAX_RANGE);
     }
 
     return 0;
@@ -31,7 +31,7 @@ int printVector(Product *vector, int maxLength)
     printf("\nImprimindo conteudo do vetor: \n");
     for (int i = 0; i < maxLength; i++)
     {
-        printf("Numero[%d]: %d\nNome[%d]: %s\n\n", i, vector[i].number, i, vector[i].type);
+        printf("Numero[%d]: %d\nNome[%d]: %s\n\n", i+1, vector[i].number, i+1, vector[i].type);
     }
     printf("\n");
 

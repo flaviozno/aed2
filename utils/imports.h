@@ -4,6 +4,8 @@
 #include <math.h>
 #include <time.h>
 
+#define MAX_RANGE 1000000
+
 struct product {
         int number;
         char type[10];

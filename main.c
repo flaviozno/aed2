@@ -6,9 +6,10 @@ int main()
 {
     Product *vet;
     int opt, tamanho;
+    clock_t ini, fim;
     do
     {
-        printf("\t --- Menu ---");
+        printf("\n\t --- Menu ---");
         printf("\n 0 - Sair");
         printf("\n 1 - Gerar vetor");
         printf("\n 2 - Mostrar vetor");
@@ -18,6 +19,7 @@ int main()
         printf("\n 6 - Pancake");
         printf("\n 7 - CoutingSort");
         printf("\n 8 - TimSort");
+        printf("\n 9 - Liberar vetor");
         printf("\n R: ");
         scanf("%d", &opt);
 
@@ -45,28 +47,57 @@ int main()
             }
             break;
         case 3:
+            ini = clock();
             bubbleSort(vet, tamanho);
+            fim = clock();
             resetVector(vet, tamanho);
+            printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 4:
+            ini = clock();
             heapSort(vet, tamanho);
+            fim = clock();
             resetVector(vet, tamanho);
+            printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 5:
+            ini = clock();
             quicksort(vet, 0, tamanho - 1);
+            fim = clock();
             resetVector(vet, tamanho);
+            printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 6:
+            ini = clock();
             pancakeSort(vet, tamanho);
+            fim = clock();
             resetVector(vet, tamanho);
+            printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 7:
+            ini = clock();
             countSort(vet, tamanho);
+            fim = clock();
             resetVector(vet, tamanho);
+            printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 8:
+            ini = clock();
             timSort(vet, tamanho);
+            fim = clock();
             resetVector(vet, tamanho);
+            printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
+            break;
+        case 9:
+            if (vet != NULL)
+            {
+                free(vet);
+                printf("\nVetor liberado com sucesso!");
+            }
+            else
+            {
+                printf("\nVetor nao alocado");
+            }
             break;
         default:
             if (opt != 0)
