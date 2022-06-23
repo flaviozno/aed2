@@ -17,12 +17,13 @@ Definir uma estrutura de dados contendo no mínimo 2 campos sendo um inteiro e u
 
 Os métodos de ordenação a serem utilizados na construção das tabelas de referência devem ser definidos de acordo com as seguintes regras:
 
-Escolher 1 entre: Bolha, Seleção e Inserção 
-Escolher 1 entre: Shellsort, Heapsort e Mergesort
-Incluir Quicksort com mediana de três
-Incluir Pancake Sort
-Incluir Counting Sort (apenas para o campo dos inteiros, não é baseado em comparações)
-Incluir outro método, excluindo-se os citados nos itens anteriores, à escolha do grupo.
+    -Escolher 1 entre: Bolha, Seleção e Inserção 
+    -Escolher 1 entre: Shellsort, Heapsort e Mergesort
+    -Incluir Quicksort com mediana de três
+    -Incluir Pancake Sort
+    -Incluir Counting Sort (apenas para o campo dos inteiros, não é baseado em comparações)
+    -Incluir outro método, excluindo-se os citados nos itens anteriores, à escolha do grupo.
+
 3) Construção das Tabelas de Referência
 
 Devem ser construídas duas tabelas de referência: uma para o campo inteiro e outra para o campo string.
@@ -36,4 +37,13 @@ Usar 5 fatias de tempo entre 10.000 e 100.000 elementos.
 
 Confeccionar um relatório do projeto, contendo introdução, visão geral dos métodos escolhidos, impressão e análise dos resultados obtidos e conclusão. Na capa do relatório devem constar os nomes dos alunos e o link para o repositório em que o código está armazenado (Replit.com).
 
-https://www.geeksforgeeks.org/timsort/
+5) Makefile
+
+```text
+build: main.c ./utils/*.c
+		gcc main.c ./utils/*.c -o app -lm
+run:
+	app.exe
+clean:
+	rm -rf app.exe
+```
