@@ -2,23 +2,30 @@
 
 void countSort(Product *vector, int maxLenght)
 {
-    printf("%d", maxLenght);
-    Product output[maxLenght];
-    int count[maxLenght + 1], i;
-    memset(count, 0, sizeof(count));
-
-    for (i = 0; vector[i].number; ++i)
-        ++count[vector[i].number];
-
-    for(i = 1; i <= maxLenght; ++i)
-        count[i] += count[i - 1];
-
-    for (i = 0; vector[i].number; ++i)
+    int maxvalue = vector[0].number;
+    int i, j, k;
+    for (i = 0; i < maxLenght; i++)
     {
-        output[count[vector[i].number] - 1] = vector[i];
-        --count[vector[i].number];
+        if (maxvalue < vector[i].number)
+            maxvalue = vector[i].number;
+    }
+    
+    int *buckets = (int *)(malloc(maxvalue * sizeof(int)));
+
+    for (i = 0; i < maxLenght; i++)
+    {
+        buckets[i] = 0;
     }
 
-    for (i = 0; vector[i].number; ++i)
-        vector[i] = output[i];
+    for (i = 0; i < maxLenght; i++)
+    {
+        buckets[vector[i].number]++;
+    }
+
+    for (i = 0, j = 0; j <= maxvalue; j++)
+    {
+        for (k = buckets[j]; k > 0; k--)
+            vector[i++].number = j;
+    }
+    free(buckets);
 }

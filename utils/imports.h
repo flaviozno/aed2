@@ -24,7 +24,7 @@ void merge(Product arr[], int l, int m, int r);
 
 void insertionSort(Product arr[], int left, int right);
 // ---Quick Sort---
-void quicksort(int *vector, int left, int right);
+void quicksort(Product *vector, int left, int right);
 
 // ---Pancake Sort---
 void pancakeSort(Product *vector, int maxLength);
