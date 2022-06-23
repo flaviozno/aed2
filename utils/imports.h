@@ -6,15 +6,13 @@
 
 #define MAX_RANGE 1000000
 
-struct product {
+struct product
+{
         int number;
         char type[10];
 };
 
 typedef struct product Product;
-
-// ---Necessary to use timer---
-clock_t t;
 
 // ---Functions to manipulate vector ---
 int fillVector(Product *vector, int maxLength);
@@ -42,3 +40,6 @@ void timSort(Product *vector, int maxLenght);
 
 // ---Counting Sort ---
 void countSort(Product *vector, int maxLenght);
+
+// ---All ---
+void one4AllTime(Product *vector, int tamanho);

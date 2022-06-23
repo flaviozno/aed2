@@ -19,7 +19,8 @@ int main()
         printf("\n 6 - Pancake");
         printf("\n 7 - CoutingSort");
         printf("\n 8 - TimSort");
-        printf("\n 9 - Liberar vetor");
+        printf("\n 9 - One 4 all");
+        printf("\n 10 - Liberar vetor");
         printf("\n R: ");
         scanf("%d", &opt);
 
@@ -89,6 +90,11 @@ int main()
             printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 9:
+            printf("\nTodos os metodos usaram o mesmo vetor de struct!");
+            printVector(vet, tamanho);
+            one4AllTime(vet, tamanho);
+            break;
+        case 10:
             if (vet != NULL)
             {
                 free(vet);
@@ -108,6 +114,7 @@ int main()
     } while (opt != 0);
     return 0;
 }
+
 void resetVector(Product *vector, int tamanho)
 {
     printVector(vector, tamanho);
