@@ -1,0 +1,1 @@
+No relatório esquecemos de incluir a tabela de referência para a ordenação de strings. Colocamos ela dentro desse reposítorio como uma imagem.
