@@ -1,11 +1,9 @@
 #include "./utils/imports.h"
 
-void resetVector(Product *vector, int tamanho);
-
 int main()
 {
     Product *vet;
-    int opt, tamanho;
+    int opt, tamanho, flag;
     clock_t ini, fim;
     do
     {
@@ -48,56 +46,63 @@ int main()
             }
             break;
         case 3:
+            flag = orderBy(flag);
             ini = clock();
-            bubbleSort(vet, tamanho);
+            bubbleSort(vet, tamanho, flag);
             fim = clock();
             resetVector(vet, tamanho);
             printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 4:
+            flag = orderBy(flag);
             ini = clock();
-            heapSort(vet, tamanho);
+            heapSort(vet, tamanho, flag);
             fim = clock();
             resetVector(vet, tamanho);
             printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 5:
+            flag = orderBy(flag);
             ini = clock();
-            quicksort(vet, 0, tamanho - 1);
+            quicksort(vet, 0, tamanho - 1, flag);
             fim = clock();
             resetVector(vet, tamanho);
             printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 6:
+            flag = orderBy(flag);
             ini = clock();
-            pancakeSort(vet, tamanho);
+            pancakeSort(vet, tamanho, flag);
             fim = clock();
             resetVector(vet, tamanho);
             printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 7:
+            flag = orderBy(flag);
             ini = clock();
-            countSort(vet, tamanho);
+            countSort(vet, tamanho, flag);
             fim = clock();
             resetVector(vet, tamanho);
             printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 8:
+            flag = orderBy(flag);
             ini = clock();
-            timSort(vet, tamanho);
+            timSort(vet, tamanho, flag);
             fim = clock();
             resetVector(vet, tamanho);
             printf("\n\tTempo gasto (aleatorios): %.5f seconds.\n", ((double)fim - ini) / CLOCKS_PER_SEC);
             break;
         case 9:
             printf("\nTodos os metodos usaram o mesmo vetor de struct!");
-            printVector(vet, tamanho);
-            one4AllTime(vet, tamanho);
+            flag = orderBy(flag);
+            one4AllTime(vet, tamanho, flag);
             break;
         case 10:
             if (vet != NULL)
             {
                 free(vet);
+
                 printf("\nVetor liberado com sucesso!");
             }
             else

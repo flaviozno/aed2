@@ -17,7 +17,7 @@ int fillVector(Product *vector, int maxLength)
 
     for (int i = 0; i < maxLength; i++)
     {
-        vector[i].number = 1 + (rand() % MAX_RANGE);
+        vector[i].number = MIN_RANGE + (rand() % MAX_RANGE);
     }
 
     return 0;

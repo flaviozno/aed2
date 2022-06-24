@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 23 14:02:30 2022
+# Make data base, printed on Fri Jun 24 14:29:45 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:59463
+JOURNAL_STREAM = 8:55250
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -75,15 +75,15 @@ MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/home/flaviozno/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=921944b49d25098c41e43d4062b49c6f
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=c9216bf6a420203e12c2f15d62b5f449
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
 LC_CTYPE = pt_BR.UTF-8
 # environment
-MANAGERPID = 1734
+MANAGERPID = 1761
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6edf8c49-d108-4cd2-a194-ddbbc220f4f3.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f52c99ce-9bad-4ffa-8037-2200765270bc.sock
 # environment
 LC_NAME = pt_BR.UTF-8
 # environment
@@ -99,7 +99,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/flaviozno:@/tmp/.ICE-unix/2087,unix/flaviozno:/tmp/.ICE-unix/2087
+SESSION_MANAGER = local/flaviozno:@/tmp/.ICE-unix/2174,unix/flaviozno:/tmp/.ICE-unix/2174
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -117,7 +117,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 2afaa640ad8b4bb5bb5efc15d4ff297c
+INVOCATION_ID = aa1498642c1a4f5fb123de6f58247bea
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/99/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -143,7 +143,7 @@ PWD = /home/flaviozno/Documents/aed2
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2047
+SSH_AGENT_PID = 2114
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -261,11 +261,11 @@ LC_ALL = C
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/90922582_1fef_47cb_8ef8_61e5bb142b9d
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/65992a80_8fb8_4447_9694_fa2f03688e13
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.109
+GNOME_TERMINAL_SERVICE = :1.114
 # default
 SUFFIXES := 
 # environment
@@ -289,9 +289,9 @@ TERM = xterm-256color
 # environment
 ANDROID_HOME = /home/flaviozno/Android/Sdk
 # environment
-VSCODE_PID = 7002
+VSCODE_PID = 8888
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=921944b49d25098c41e43d4062b49c6f
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=c9216bf6a420203e12c2f15d62b5f449
 # variable set hash-table stats:
  
 # Load=140/1024=14%, Rehash=0, Collisions=23/165=14%
@@ -302,10 +302,10 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=921944b49d25098c41e43d4
 
 # Directories
 
-# utils (device 66310, inode 7045949): 13 files, no impossibilities.
+# utils (device 66310, inode 7045949): 14 files, no impossibilities.
 # . (device 66310, inode 7045781): 9 files, no impossibilities.
 
-# 22 files, no impossibilities in 2 directories.
+# 23 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -339,13 +339,19 @@ utils/swap.c:
 #  File has not been updated.
 
 # Not a target:
+utils/one4AllTime.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-22 16:37:04.052010791
 #  File has been updated.
 #  Successfully updated.
 
-build: main.c utils/bubbleSort.c utils/quickSort.c utils/merge.c utils/heapSort.c utils/pancakeSort.c utils/insetionSort.c utils/vector.c utils/swap.c utils/timSort.c utils/countSort.c
+build: main.c utils/bubbleSort.c utils/quickSort.c utils/merge.c utils/heapSort.c utils/pancakeSort.c utils/insetionSort.c utils/one4AllTime.c utils/vector.c utils/swap.c utils/timSort.c utils/countSort.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -421,19 +427,19 @@ utils/timSort.c:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=18/1024=2%, Rehash=0, Collisions=0/39=0%
+# Load=19/1024=2%, Rehash=0, Collisions=0/41=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 417 B / avg = 10 B
-# current buf: size = 8162 B / used = 417 B / count = 38 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 40 / storage = 458 B / avg = 11 B
+# current buf: size = 8162 B / used = 458 B / count = 40 / avg = 11 B
 
-# strcache performance: lookups = 49 / hit rate = 22%
+# strcache performance: lookups = 51 / hit rate = 21%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=2/49=4%
-# Finished Make data base on Thu Jun 23 14:02:30 2022
+# Load=40/8192=0%, Rehash=0, Collisions=2/51=4%
+# Finished Make data base on Fri Jun 24 14:29:45 2022
 
  
