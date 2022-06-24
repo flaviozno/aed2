@@ -3,6 +3,7 @@
     "files.associations": {
         "*.rmd": "markdown",
         "typeinfo": "c",
-        "limits": "c"
+        "limits": "c",
+        "imports.h": "c"
     }
 }

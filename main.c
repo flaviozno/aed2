@@ -27,7 +27,7 @@ int main()
         case 1:
             printf("\nInforme o tamanho do vetor: ");
             scanf("%d", &tamanho);
-            vet = (Product *)(malloc(tamanho * (sizeof(Product))));
+            vet = (Product *)malloc(tamanho * (sizeof(Product)));
             if (vet == NULL)
             {
                 printf("\nErro ao alocar vetor");
